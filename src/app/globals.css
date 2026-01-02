@@ -1,0 +1,280 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #f4f6fb;
+  color: #101828;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+main {
+  padding: 2.5rem clamp(1.5rem, 3vw, 4rem);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #475467;
+  margin-bottom: 0.4rem;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  color: #101828;
+}
+
+.lede {
+  max-width: 46rem;
+  color: #475467;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.summary-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 2.5rem;
+}
+
+.summary-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border-top: 6px solid #d0d5dd;
+  box-shadow: 0 20px 35px -30px rgba(15, 23, 42, 0.35);
+}
+
+.summary-title {
+  font-size: 0.9rem;
+  color: #475467;
+  margin-bottom: 0.75rem;
+}
+
+.summary-value {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #101828;
+}
+
+.summary-helper {
+  font-size: 0.85rem;
+  color: #667085;
+  margin-top: 0.5rem;
+}
+
+.grid-two {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-bottom: 2.5rem;
+}
+
+.chart-card,
+.insight-card,
+.table-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 24px 45px -30px rgba(15, 23, 42, 0.25);
+}
+
+.chart-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-card-header h2,
+.insight-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #101828;
+}
+
+.chart-card-header p {
+  font-size: 0.9rem;
+  color: #667085;
+}
+
+.badge {
+  background: #1d4ed8;
+  color: #f8fafc;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.chart-fallback {
+  height: 320px;
+  display: grid;
+  place-content: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.insight-card {
+  margin-bottom: 2.5rem;
+}
+
+.insight-card ul {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  color: #475467;
+  line-height: 1.6;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.table-header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #101828;
+}
+
+.table-header p {
+  font-size: 0.85rem;
+  color: #667085;
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e4e7ec;
+  font-size: 0.92rem;
+}
+
+thead th {
+  font-weight: 600;
+  color: #475467;
+  background: #f8fafc;
+  position: sticky;
+  top: 0;
+}
+
+.numeric {
+  text-align: right;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: #e2e8f0;
+}
+
+.chip-food {
+  background: rgba(249, 115, 22, 0.15);
+  color: #c2410c;
+}
+
+.chip-transport {
+  background: rgba(30, 64, 175, 0.15);
+  color: #1d4ed8;
+}
+
+.chip-shopping {
+  background: rgba(67, 56, 202, 0.15);
+  color: #4338ca;
+}
+
+.chip-documentation {
+  background: rgba(217, 70, 239, 0.15);
+  color: #a21caf;
+}
+
+.chip-mobile {
+  background: rgba(14, 165, 233, 0.18);
+  color: #0369a1;
+}
+
+.chip-coffee {
+  background: rgba(79, 70, 229, 0.1);
+  color: #312e81;
+}
+
+.chip-connectivity {
+  background: rgba(34, 197, 94, 0.18);
+  color: #047857;
+}
+
+.chip-health {
+  background: rgba(239, 68, 68, 0.18);
+  color: #b91c1c;
+}
+
+.chip-misc {
+  background: rgba(100, 116, 139, 0.18);
+  color: #334155;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  table {
+    min-width: 520px;
+  }
+}
